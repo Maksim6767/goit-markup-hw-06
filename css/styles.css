@@ -806,8 +806,8 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
 .form-icon {
    position: absolute;
    top: 30px;
-   left: 15px;
-   width: 15px;
+   left: 20px;
+   width: 20px;
    height: 15px;
 }
 .form-field:hover .form-icon,
@@ -832,17 +832,19 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
 .form-field:focus .form-comment {
    border-color: var(--button-bg-color);
 }
-/* .check-icon {
-   display: flex;
+
+.check-icon {
+   display: inline-block;
    position: absolute;
-   left:54px;
+   left: 20px;
    width: 16px;
    height: 15px;
    margin-right: 8px;
-   background-color: var(--primery-text-color);
-} */
+   background-color: orange;
+   border-radius: 2px;
+} 
 
-.policy-input {
+.checkbox {
    margin-right: 8px;
    margin-bottom: 30px;
 /*       
@@ -854,17 +856,17 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
       clip: rect(0 0 0 0);
       overflow: hidden; */
 }  
-/* .policy-input:checked + .check-icon {
-   border-color: var(--button-bg-color);
+.checkbox:checked + .check-icon {
+   background-color: var(--button-bg-color);
    background-image: url(./images/icons.svg#icon-check);
    background-size: contain;
    background-origin: border-box;
-   background-color: var(--button-bg-color);
-} */
+   /* background-color: var(--button-bg-color); */
+} 
 
-.form-policy {
-   /* display: flex;
-   align-items: center; */
+.form-checkbox {
+   display: block;
+   align-items: center;
    margin: 0;
    font-weight: 400;
    font-size: 14px;
@@ -876,10 +878,6 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    color: var(--button-bg-color);
    text-decoration: underline;
 }
-.check-icon {
-   
-}
-
 
 .form-submit {
    min-width: 200px;
