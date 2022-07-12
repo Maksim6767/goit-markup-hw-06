@@ -446,56 +446,66 @@
                 <use href="./images/icons.svg#icon-modal"></use>
             </svg>
         </button>
-
-        <form class="form" autocomplete="off">
-            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <div class="modal-inner">
+        <form class="form" name="main-form" autocomplete="on" novalidate>
+            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
         
-        <label>
             <div class="form-field">
-            <span class="form-text">Имя</span>
-            <input class="form-input" type="text" name="name" autofocus/> 
-             <svg class="form-icon" width="12" height="12">
-                <use href="./images/icons.svg#icon-person"></use>
-            </svg>
-            </div>
-        </label>
-       
-        <label> 
-            <div class="form-field">
-            <span class="form-text">Телефон</span>
-            <input class="form-input" type="tel" name="tel"/>
-            <svg class="form-icon" width="15" height="13">
-                <use href="./images/icons.svg#icon-phone-black"></use>
-            </svg>
-            </div>
-        </label>
-        
-        <label>
-            <div class="form-field">
-                <span class="form-text">Почта</span>
-                <input class="form-input" type="email" name="mail"/> 
-                <svg class="form-icon" width="15" height="15">
-                    <use href="./images/icons.svg#icon-email-black"></use>
+                <label class="form-field-label" for="user-name">
+                    <span class="form-title-label">Имя</span>
+                </label>
+            <div class="form-field-inner">
+                <input class="form-field-input" id="user-name" type="text" name="user-name">
+                <svg class="form-field-icon" aria-hidden="true" width="12" height="12">
+                    <use href="./images/icons.svg#icon-person"></use>
                 </svg>
             </div>
-        </label>
+            </div>
 
-        <label>
             <div class="form-field">
-            <span class="form-text">Комментарий</span>
-            <textarea class="form-comment" name="comment" placeholder="Введите текст"></textarea>
-            </div> 
-        </label> 
+                <label class="form-field-label" for="user-phone">
+                    <span class="form-title-label">Телефон</span>
+                </label>
+            <div class="form-field-inner">
+                <input class="form-field-input" id="user-phone" type="tel" name="user-phone">
+                <svg class="form-field-icon"  aria-hidden="true" width="15" height="13">
+                    <use href="./images/icons.svg#icon-phone-black"></use>
+                </svg>
+            </div>
+            </div>
 
-        <label class="form-checkbox">
-            <input class="checkbox" type="checkbox" name="policy"/>
-            <span class="check-icon"></span>
-            Соглашаюсь с рассылкой и принимаю <span class="dogovor">Условия договора</span>
-        </label>
-    
-        <button class="form-submit" type="submit">Отправить</button>
+            <div class="form-field">
+                <label class="form-field-label" for="user-email">
+                    <span class="form-title-label">Почта</span>
+                </label>
+                <div class="form-field-inner">
+                    <input class="form-field-input" id="user-email" type="tel" name="user-email">
+                    <svg class="form-field-icon" aria-hidden="true" width="15" height="13">
+                        <use href="./images/icons.svg#icon-email-black"></use>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="form-field-comment">
+                <label class="form-field-label" for="user-comment">
+                    <span class="form-title-label">Комментарий</span>
+                </label>
+                <textarea class="form-field-input form-field-textarea" id="user-comment" name="user-comment" rows="10"
+                    placeholder="Введите текст"></textarea>
+            </div>
+
+            <div class="form-field form-field-condition">
+                <input class="terms-condition-input" id="terms-condition" type="checkbox" name="terms-condition">
+                <!-- <span class="check-icon"></span> -->
+                <label class="terms-condition-label" for="terms-condition">
+                     Соглашаюсь с рассылкой и принимаю <span class="terms-condition-text">Условия
+                    договора</span>
+                </label>
+            </div>
+        
+            <button class="form-field-button" type="submit">Отправить</button>
         </form>
-
+    </div>
     </div>
 </div>
 

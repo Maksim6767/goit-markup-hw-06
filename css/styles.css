@@ -748,10 +748,17 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    transform: translate(-50%, -50%);
    margin: 0;
    width: 528px;
+/* задание фиксированной высоты модального окна */
+   max-height: 581px;
+   height: 100;
+   overflow: auto;
+
    background-color: var(--accent-text-color);
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 4px;
-   
+}
+.modal-inner {
+   padding: 40px;
 }
 .close-button {
    position: absolute;
@@ -772,22 +779,11 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
 .close-button:hover .modal-icon{
    fill: var(--button-bg-color);
 }
-
-.form {
-   width: 528px;
-   margin: 0;
-   padding: 40px;
-   text-align: center;
-   background-color: var(--primery-bg-color);
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-   border-radius: 4px;
-}
 .modal-title {
    display: inline-block;
    width: 448px;
    margin-bottom: 12px;
    margin-right: 0;
-   font-weight: 700;
    font-size: 20px;
    line-height: 1.15;
    text-align: center;
@@ -795,59 +791,103 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    color: #212121;
 }
 .form-field {
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   width: 448px;
+   margin-bottom: 10px;
 }
-.form-text {
+.form-field-label {
+   display: block;
    margin-bottom: 4px;
-   text-align: left;
-   font-family: 'Roboto';
-   font-weight: 400;
+}
+.form-field-label {
    font-size: 12px;
    line-height: 1.17;
    letter-spacing: 0.01em;
-   color: var(--primery-text-color);
 }
-.form-input {
+.form-field-input {
+   width: 100%;
    height: 40px;
-   margin-bottom: 10px;
-   padding: 0;
+   font-family: inherit;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
+   padding: 12px 12px 12px 42px;
    cursor: pointer;
 }
-
-.form-icon {
-   position: absolute;
-   top: 30px;
-   left: 20px;
-   width: 20px;
-   height: 15px;
+.form-field-inner {
+   position: relative;
 }
-.form-field:hover .form-icon,
-.form-field:active .form-icon {
+.form-field-icon {
+   position: absolute;
+   left: 12px;
+   top: 50%;
+   width: 16px;
+   height: 16px;
+   transform: translateY(-50%);
+}
+
+.form-field:hover .form-field-icon,
+.form-field:focus .form-field-icon {
    fill: var(--button-bg-color);
 }
-.form-field:hover .form-input,
-.form-field:focus .form-input {
+
+.form-field:hover .form-field-input,
+.form-field:focus .form-field-input {
    border-color: var(--button-bg-color);
 }
-.form-comment {
+.form-field-textarea {
+   width: 100%;
    height: 120px;
-   margin-bottom: 20px;
    padding: 12px 16px;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
    resize: none;
+}
+.form-field-textarea::placeholder {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.01em;
+   color: rgba(117, 117, 117, 0.5);
+}
+.form-field-comment {
+   margin-top: 0;
+   margin-bottom: 20px;
+}
+.form-field-condition {
+   margin-bottom: 30px;
+}
+.terms-condition-input {
+   margin-right: 8px;
+}
+.terms-condition-label {
+   margin-top: 0;
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+}
+.terms-condition-text {
+   color: var(--button-bg-color);
+   text-decoration: underline;
+}
+.form-field-button {
+   display: inline-block;
+   transform: translateX(57%);
+   width: 50px;
+   min-width: 200px;
+   padding: 10px 56px;
+   color: var(--accent-text-color);
+   background-color: var(--button-bg-color);
+   
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.89;
+   letter-spacing: 0.06em;
+   
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border: none;
+   border-radius: 4px;
    cursor: pointer;
+   /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-.form-field:hover .form-comment,
-.form-field:focus .form-comment {
-   border-color: var(--button-bg-color);
-}
 /* Кастомный чек-бокс */
 .form-checkbox {
    display: block;
@@ -889,12 +929,9 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    /* background-color: var(--button-bg-color); */ 
 } 
 
-.dogovor {
-   color: var(--button-bg-color);
-   text-decoration: underline;
-}
+
 /* Копка отправить */
-.form-submit {
+/* .form-submit {
    min-width: 200px;
    padding: 10px 56px;
    color: var(--accent-text-color);
@@ -911,4 +948,4 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    border-radius: 4px;
    cursor: pointer;
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
