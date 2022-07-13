@@ -708,8 +708,43 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    transform: translateY(0);
 }
 /* Форма подписки на рассылку в футере*/
-
-.form-footer-button {
+.footer-inner {
+   padding: 0;
+   margin-right: 215px;
+   margin-left: 94px;
+}
+ .form-writing {
+   display: flex;
+   margin-top: 36px;
+ }
+.form-field {
+   position: relative;
+   align-items: center;
+}
+.footer-label-text {
+   position: absolute;
+   left: 16px;
+   top: 50%;
+   /* transform: translateY(-50%); */
+   color: var(--title-text-color);
+}
+.footer-form-input {
+   width: 358px;
+   height: 50px; 
+   padding: 15px 16px 15px 60px;
+}
+.footer-form-button {
+   /* position: relative; */
+   width: 200px;
+   height: 50px;
+}
+.footer-button-icon {
+   /* position: absolute; */
+   /* top: 50%; */
+   left: 0;
+   /* transform: translateY(-50%); */
+}
+/* .form-footer-button {
    display: inline-flex;
    width: 200px;
    height: 50px;
@@ -721,7 +756,7 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    background-color: var(--primery-bg-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    border-radius: 4px;
-}
+} */
 
 /* Modal window */
 .backdrop {
@@ -925,7 +960,6 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    border-radius: 4px;
 } 
 .terms-condition-input:checked + .check-icon {
-   outline: none;
    background-color: var(--button-bg-color);
    background-image: url("./images/icons.svg#icon-check");
    background-size: contain;

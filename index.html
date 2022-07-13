@@ -419,22 +419,28 @@
         </ul>
         </div>
 <!-- Форма подписки на рассылку в футере -->
-        <form class="form-footer" autocomplete="off">
-            <p class="form-footer-title">Подпишитесь на рассылку</p>
-        <div class="form-footer-field">
-            <label>
-                <span class="form-footer-text">E-mail</span>
-                <input class="header-input" type="text" name="name" autofocus />
-                    
-                    <svg class="form-footer-icon" width="12" height="12">
-                        <use href="./images/icons.svg#icon-person"></use>
-                    </svg> 
-            </label>
+    <div class="footer-inner">
+        <form class="footer-form" name="footer-form" autocomplete="on" novalidate>
+            <div class="form-writing">
+            <h3 class="footer-form-title">Подпишитесь на рассылку</h3>
+
+            <div class="form-field">
+                <label class="footer-form-label" for="user-email">
+                    <span class="footer-label-text">E-mail</span>
+                </label>
+                    <input class="footer-form-input" id="user-email" type="email" name="email">
+            </div>
+       
+            <div class="footer-button">
+             <button class="footer-form-button" type="submit">Подписаться</button>
+                <svg class="footer-button-icon" width="12" height="12">
+                    <use href="./images/icons.svg#icon-person"></use>
+                </svg> 
+            </div>
         </div>
-    </form>
-        <button class="form-footer-button" type="submit">Подписаться</button>
-        
+        </form>
     </div>
+    
 </footer>
 
 <!-- Модальное окно -->
@@ -446,6 +452,7 @@
                 <use href="./images/icons.svg#icon-modal"></use>
             </svg>
         </button>
+
         <div class="modal-inner">
         <form class="form" name="main-form" autocomplete="on" novalidate>
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
@@ -479,7 +486,7 @@
                     <span class="form-title-label">Почта</span>
                 </label>
                 <div class="form-field-inner">
-                    <input class="form-field-input" id="user-email" type="tel" name="user-email">
+                    <input class="form-field-input" id="user-email" type="email" name="user-email">
                     <svg class="form-field-icon" aria-hidden="true" width="15" height="13">
                         <use href="./images/icons.svg#icon-email-black"></use>
                     </svg>
