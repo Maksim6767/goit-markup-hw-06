@@ -710,40 +710,79 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
 /* Форма подписки на рассылку в футере*/
 .footer-inner {
    padding: 0;
-   margin-right: 215px;
+   margin-right: 0;
    margin-left: 94px;
 }
- .form-writing {
+.footer-form {
    display: flex;
-   margin-top: 36px;
+}
+ .form-writing {
+   display: block;
+   margin-top: 0;
+ }
+ .footer-form-title {
+  margin-bottom: 20px;
+  padding-top: 12px;
  }
 .form-field {
    position: relative;
+   margin-left: 94px;
+   margin-right: 12px;
    align-items: center;
 }
 .footer-label-text {
    position: absolute;
    left: 16px;
    top: 50%;
-   /* transform: translateY(-50%); */
-   color: var(--title-text-color);
+   font-size: 16px;
+   letter-spacing: 0.03em;
+   color: rgba(255, 255, 255, 0.6);
 }
 .footer-form-input {
    width: 358px;
    height: 50px; 
-   padding: 15px 16px 15px 60px;
+   padding: 15px 16px 15px 70px;
+   background-color: var(--secondary-bg-color);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-radius: 4px;
+   cursor: pointer;
+}
+.footer-button {
+    position: relative;
+   display: block;
+   margin-left: 12px;
 }
 .footer-form-button {
-   /* position: relative; */
    width: 200px;
    height: 50px;
-}
+   padding: 8px 64px 16px 29px;
+   transform: translateY(97%);
+   background-color: var(--button-bg-color);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.875;
+   letter-spacing: 0.06em;
+   color: var(--accent-text-color);
+} 
 .footer-button-icon {
-   /* position: absolute; */
-   /* top: 50%; */
-   left: 0;
-   /* transform: translateY(-50%); */
-}
+      position: absolute;
+      right: 13px;
+      top: 64px;
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      margin-right: 13px;
+      }
+
+/* .footer-button-icon::before {
+   position: absolute;
+   top: 50%;
+   left: 100%;
+} */
+
 /* .form-footer-button {
    display: inline-flex;
    width: 200px;
