@@ -753,34 +753,35 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
 }
 .footer-button {
    position: relative;
-   display: block;
    margin-left: 12px;
 }
 .footer-form-button {
+   position: relative;
    width: 200px;
    height: 50px;
+   margin-left: 12px;
    padding: 8px 64px 16px 29px;
    transform: translateY(97%);
+   color: var(--accent-text-color);
    background-color: var(--button-bg-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   border: none;
    border-radius: 4px;
+   border: none; 
 
    font-weight: 700;
    font-size: 16px;
    line-height: 1.875;
    letter-spacing: 0.06em;
-   color: var(--accent-text-color);
 } 
 .footer-button-icon {
-      position: absolute;
-      right: 13px;
-      top: 64px;
-      width: 24px;
-      height: 24px;
-      margin-left: 10px;
-      margin-right: 13px;
-      }
+   position: absolute;
+   right: 13px;
+   top: 64px;
+   width: 24px;
+   height: 24px;
+   margin-left: 10px;
+   margin-right: 13px;
+}
 
 /* Modal window */
 .backdrop {
@@ -816,6 +817,7 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    border-radius: 4px;
 }
 .modal-inner {
+   display: block;
    padding: 40px;
 }
 .close-button {
@@ -854,6 +856,7 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
    color: #212121;
 }
 .form-field {
+   display: block;
    margin-bottom: 10px;
 }
 .form-field-label {
@@ -928,7 +931,7 @@ box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
 }
 .form-field-button {
    transform: translateX(57%);
-
+   /* margin-bottom: 40px; */
    padding: 10px 56px;
    color: var(--accent-text-color);
    background-color: var(--button-bg-color);
